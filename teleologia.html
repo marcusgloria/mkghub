@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roadmap de Estudos: Teleologia e Propósito Cristão da Vida</title>
+    <meta name="description" content="Um guia abrangente e interativo para explorar o propósito da vida através da teleologia e perspectivas cristãs">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2E4057">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+    <div class="container">
+    <!-- Botão de voltar ao hub -->
+    <div style="text-align: left; margin-bottom: 1rem;">
+        <a href="index.html" style="color: white; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background: rgba(255,255,255,0.2); border-radius: 25px; transition: all 0.3s ease;">
+            <span>←</span>
+            <span>Voltar ao Hub</span>
+        </a>
+    </div>
+    
+    <h1 class="main-title">Roadmap de Estudos</h1>
+    <h2 class="subtitle">Teleologia e Propósito Cristão da Vida</h2>
+    <p class="description">Um guia abrangente e interativo para explorar o propósito da vida</p>
+    
+    <!-- Progress Indicator -->
+    <div class="overall-progress">
+    <div class="progress-bar">
+    <div class="progress-fill" id="overallProgress"></div>
+    </div>
+    <span class="progress-text" id="progressText">0% Concluído</span>
+    </div>
+    </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navigation" id="navigation">
+    <div class="container">
+    <button class="nav-toggle" id="navToggle">
+    <span></span>
+    <span></span>
+    <span></span>
+    </button>
+    
+    <ul class="nav-list" id="navList">
+    <li class="nav-item">
+    <a href="#phase1" class="nav-link active" data-phase="1">
+    <span class="phase-number">1</span>
+    <span class="phase-title">Fundamentos em Teleologia</span>
+    <span class="phase-weeks">Semanas 1-3</span>
+    </a>
+    </li>
+    <li class="nav-item">
+    <a href="#phase2" class="nav-link" data-phase="2">
+    <span class="phase-number">2</span>
+    <span class="phase-title">Teleologia e Religião</span>
+    <span class="phase-weeks">Semanas 4-6</span>
+    </a>
+    </li>
+    <li class="nav-item">
+    <a href="#phase3" class="nav-link" data-phase="3">
+    <span class="phase-number">3</span>
+    <span class="phase-title">Antigo Testamento</span>
+    <span class="phase-weeks">Semanas 7-8</span>
+    </a>
+    </li>
+    <li class="nav-item">
+    <a href="#phase4" class="nav-link" data-phase="4">
+    <span class="phase-number">4</span>
+    <span class="phase-title">Novo Testamento</span>
+    <span class="phase-weeks">Semanas 9-11</span>
+    </a>
+    </li>
+    <li class="nav-item">
+    <a href="#phase5" class="nav-link" data-phase="5">
+    <span class="phase-number">5</span>
+    <span class="phase-title">Visões Contemporâneas</span>
+    <span class="phase-weeks">Semanas 12-14</span>
+    </a>
+    </li>
+    </ul>
+    
+    <div class="nav-actions">
+    <button class="btn btn-secondary" id="resetProgress">Limpar Progresso</button>
+    <button class="btn btn-secondary" id="exportProgress">Exportar</button>
+    <input type="file" id="importProgress" accept=".json" style="display: none;">
+    <button class="btn btn-secondary" id="importBtn">Importar</button>
+    </div>
+    </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+    <div class="container">
+    <!-- Phase 1: Fundamentos em Teleologia -->
+    <section class="phase-section active" id="phase1" data-phase="1">
+    <div class="phase-header">
+    <h2 class="phase-title">Fase 1: Fundamentos em Teleologia</h2>
+    <p class="phase-duration">Semanas 1-3</p>
+    <div class="phase-progress">
+    <div class="progress-bar">
+    <div class="progress-fill" data-progress="phase1"></div>
+    </div>
+    <span class="progress-text" data-progress-text="phase1">0% Concluído</span>
+    </div>
+    </div>
+
+    <div class="phase-content">
+    <div class="goal-section">
+    <h3>Objetivo</h3>
+    <p>Compreender o conceito filosófico de teleologia, seu desenvolvimento histórico e suas várias aplicações.</p>
+    </div>
+
+    <div class="questions-section">
+    <h3>Questões-Chave</h3>
+    <ul class="key-questions">
+    <li>O que é teleologia?</li>
+    <li>Quais são os diferentes tipos de teleologia (natural, artificial, intrínseca, extrínseca)?</li>
+    <li>Como a teleologia foi compreendida na história da filosofia ocidental?</li>
+    <li>Quais são os argumentos a favor e contra as explicações teleológicas?</li>
+    </ul>
+    </div>
+
+    <div class="materials-section">
+    <h3>Materiais de Estudo</h3>
+    
+    <div class="material-category">
+    <h4>Livros Introdutórios de Filosofia</h4>
+    <div class="material-list">
+    <div class="material-item">
+    <input type="checkbox" id="material1_1" class="material-checkbox">
+    <label for="material1_1">
+    <a href="https://open.umn.edu/opentextbooks/textbooks/598" target="_blank">An Introduction to Philosophy - Open Textbook Library</a>
+    </label>
+    </div>
+    <div class="material-item">
+    <input type="checkbox" id="material1_2" class="material-checkbox">
+    <label for="material1_2">
+    <a href="https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Philosophy-WEB_cszrKYp.pdf" target="_blank">Introduction to Philosophy - OpenStax (PDF)</a>
+    </label>
+    </div>
+    <div class="material-item">
+    <input type="checkbox" id="material1_3" class="material-checkbox">
+    <label for="material1_3">
+    <a href="https://louis.pressbooks.pub/introphilosophy/chapter/introduction-to-metaphysics/" target="_blank">Readings in Western Philosophy for Louisiana Learners</a>
+    </label>
+    </div>
+    </div>
+    </div>
+
+    <div class="material-category">
+    <h4>Aristóteles</h4>
+    <div class="material-list">
+    <div class="material-item">
+    <input type="checkbox" id="material1_4" class="material-checkbox">
+    <label for="material1_4">
+    <a href="http://classics.mit.edu/Aristotle/physics.2.ii.html" target="_blank">Physics by Aristotle (Book II)</a>
+    </label>
+    </div>
+    <div class="material-item">
+    <input type="checkbox" id="material1_5" class="material-checkbox">
+    <label for="material1_5">
+    <a href="http://classics.mit.edu/Aristotle/metaphysics.1.i.html" target="_blank">Metaphysics by Aristotle (Book A)</a>
+    </label>
+    </div>
+    </div>
+    </div>
+
+    <div class="material-category">
+    <h4>Platão</h4>
+    <div class="material-list">
+    <div class="material-item">
+    <input type="checkbox" id="material1_6" class="material-checkbox">
+    <label for="material1_6">
+    <a href="https://classics.mit.edu/Plato/timaeus.html" target="_blank">Timaeus by Plato</a>
+    </label>
+    </div>
+    </div>
+    </div>
+
+    <div class="material-category">
+    <h4>Stanford Encyclopedia of Philosophy (SEP)</h4>
+    <div class="material-list">
+    <div class="material-item">
+    <input type="checkbox" id="material1_7" class="material-checkbox">
+    <label for="material1_7">
+    <a href="https://plato.stanford.edu/entries/teleology-biology/" target="_blank">Teleological Notions in Biology (SEP)</a>
+    </label>
+    </div>
+    <div class="material-item">
+    <input type="checkbox" id="material1_8" class="material-checkbox">
+    <label for="material1_8">
+    <a href="https://plato.stanford.edu/entries/aristotle-metaphysics/" target="_blank">Aristotle's Metaphysics (SEP)</a>
+    </label>
+    </div>
+    <div class="material-item">
+    <input type="checkbox" id="material1_9" class="material-checkbox">
+    <label for="material1_9">
+    <a href="https://plato.stanford.edu/entries/aristotle-causality/" target="_blank">Aristotle on Causality (SEP)</a>
+    </label>
+    </div>
+    </div>
+    </div>
+
+    <div class="material-category">
+    <h4>Artigos/Ensaios Contemporâneos</h4>
+    <div class="material-list">
+    <div class="material-item">
+    <input type="checkbox" id="material1_10" class="material-checkbox">
+    <label for="material1_10">
+    <a href="https://link.springer.com/article/10.1007/s11229-025-04926-7" target="_blank">Teleology for the twenty-first century: editorial introduction</a>
+    </label>
+    </div>
+    <div class="material-item">
+    <input type="checkbox" id="material1_11" class="material-checkbox">
+    <label for="material1_11">
+    <a href="https://www.numberanalytics.com/blog/teleology-in-modern-philosophy" target="_blank">Teleology in Modern Philosophy</a>
+    </label>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <div class="activities-section">
+    <h3>Atividades</h3>
+    <div class="activity-list">
+    <div class="activity-item">
+    <input type="checkbox" id="activity1_1" class="activity-checkbox">
+    <label for="activity1_1">Definir termos-chave: teleologia, causa final, causa eficiente, causa material, causa formal, propósito intrínseco, propósito extrínseco</label>
+    </div>
+    <div class="activity-item">
+    <input type="checkbox" id="activity1_2" class="activity-checkbox">
+    <label for="activity1_2">Comparar e contrastar a teleologia de Aristóteles com outras perspectivas gregas antigas</label>
+    </div>
+    <div class="activity-item">
+    <input type="checkbox" id="activity1_3" class="activity-checkbox">
+    <label for="activity1_3">Analisar argumentos a favor e contra a existência de explicações teleológicas na natureza</label>
+    </div>
+    <div class="activity-item">
+    <input type="checkbox" id="activity1_4" class="activity-checkbox">
+    <label for="activity1_4">Escrever um ensaio curto sobre a relevância da teleologia em discussões científicas ou éticas contemporâneas</label>
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+
+    <!-- Phase 2: Conectando Teleologia e Religião -->
+    <section class="phase-section" id="phase2" data-phase="2">
+    <div class="phase-header">
+    <h2 class="phase-title">Fase 2: Conectando Teleologia e Religião</h2>
+    <p class="phase-duration">Semanas 4-6</p>
+    <div class="phase-progress">
+    <div class="progress-bar">
+    <div class="progress-fill" data-progress="phase2"></div>
+    </div>
+    <span class="progress-text" data-progress-text="phase2">0% Concluído</span>
+    </div>
+    </div>
+
+    <div class="phase-content">
+    <div class="goal-section">
+    <h3>Objetivo</h3>
+    <p>Explorar como os conceitos teleológicos foram incorporados ao pensamento religioso, especificamente em preparação para as perspectivas cristãs.</p>
+    </div>
+
+    <div class="questions-section">
+    <h3>Questões-Chave</h3>
+    <ul class="key-questions">
+    <li>Como as tradições religiosas geralmente empregam o raciocínio teleológico para compreender o mundo e a existência humana?</li>
+    <li>Quais são os argumentos comuns para um designer divino baseados na teleologia?</li>
+    <li>Quais são as críticas a tais argumentos (ex: críticas de Hume ao argumento do design)?</li>
+    </ul>
+    </div>
+
+    <div class="materials-section">
+    <h3>Materiais de Estudo</h3>
+    
+    <div class="material-category">
+    <h4>Livros Didáticos de Filosofia da Religião</h4>
+    <div class="material-list">
+    <div class="material-item">
+    <input type="checkbox" id="material2_1" class="material-checkbox">
+    <label for="material2_1">
+    <a href="https://plato.stanford.edu/entries/teleological-arguments/" target="_blank">Teleological Arguments for God's Existence (SEP)</a>
+    </label>
+    </div>
+    <div class="material-item">
+    <input type="checkbox" id="material2_2" class="material-checkbox">
+    <label for="material2_2">
+    <a href="https://iep.utm.edu/design-arguments-for-existence-of-god/" target="_blank">Design Arguments for the Existence of God (IEP)</a>
+    </label>
+    </div>
+    </div>
+    </div>
+
+    <div class="material-category">
+    <h4>William Paley</h4>
+    <div class="material-list">
+    <div class="material-item">
+    <input type="checkbox" id="material2_3" class="material-checkbox">
+    <label for="material2_3">
+    <a href="https://www.stephenhicks.org/wp-content/uploads/2016/09/PaleyWilliam-Watch-Watchmaker.pdf" target="_blank">William Paley - The Watch and the Watchmaker (PDF)</a>
+    </label>
+    </div>
+    <div class="material-item">
+    <input type="checkbox" id="material2_4" class="material-checkbox">
+    <label for="material2_4">
+    <a href="https://pages.uoregon.edu/sshoemak/323/texts/william_paley.htm" target="_blank">Excerpts from William Paley's Natural Theology</a>
+    </label>
+    </div>
+    </div>
+    </div>
+
+    <div class="material-category">
+    <h4>David Hume</h4>
+    <div class="material-list">
+    <div class="material-item">
+    <input type="checkbox" id="material2_5" class="material-checkbox">
+    <label for="material2_5">
+    <a href="https://www.earlymoderntexts.com/assets/pdfs/hume1779.pdf" target="_blank">Dialogues Concerning Natural Religion (Early Modern Texts)</a>
+    </label>
+    </div>
+    <div class="material-item">
+    <input type="checkbox" id="material2_6" class="material-checkbox">
+    <label for="material2_6">
+    <a href="https://www.gutenberg.org/files/4583/4583-h/4583-h.htm" target="_blank">Dialogues Concerning Natural Religion (Project Gutenberg)</a>
+    </label>
+    </div>
+    </div>
+    </div>
+
+    <div class="material-category">
+    <h4>Tomás de Aquino</h4>
+    <div class="material-list">
+    <div class="material-item">
+    <input type="checkbox" id="material2_7" class="material-checkbox">
+    <label for="material2_7">
+    <a href="https://www.newadvent.org/summa/1002.htm" target="_blank">The existence of God (Prima Pars, Q. 2) - New Advent (Contém a Quinta Via)</a>
+    </label>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <div class="activities-section">
+    <h3>Atividades</h3>
+    <div class="activity-list">
+    <div class="activity-item">
+    <input type="checkbox" id="activity2_1" class="activity-checkbox">
+    <label for="activity2_1">Delinear os pontos fortes e fracos do argumento teleológico para a existência de Deus</label>
+    </div>
+    <div class="activity-item">
+    <input type="checkbox" id="activity2_2" class="activity-checkbox">
+    <label for="activity2_2">Comparar os argumentos de Paley e Hume</label>
+    </div>
+    <div class="activity-item">
+    <input type="checkbox" id="activity2_3" class="activity-checkbox">
+    <label for="activity2_3">Discutir o papel da fé versus razão em aceitar ou rejeitar argumentos teleológicos para Deus</label>
+    </div>
+    <div class="activity-item">
+    <input type="checkbox" id="activity2_4" class="activity-checkbox">
+    <label for="activity2_4">Considerar como diferentes tradições religiosas (além do cristianismo, brevemente) podem articular uma visão teleológica do propósito da vida</label>
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+
+    <!-- Phase 3: Teleologia Cristã - Antigo Testamento -->
+    <section class="phase-section" id="phase3" data-phase="3">
+    <div class="phase-header">
+    <h2 class="phase-title">Fase 3: Teleologia Cristã e Propósito da Vida - Fundamentos do Antigo Testamento</h2>
+    <p class="phase-duration">Semanas 7-8</p>
+    <div class="phase-progress">
+    <div class="progress-bar">
+    <div class="progress-fill" data-progress="phase3"></div>
+    </div>
+    <span class="progress-text" data-progress-text="phase3">0% Concluído</span>
+    </div>
+    </div>
+
+    <div class="phase-content">
+    <div class="goal-section">
+    <h3>Objetivo</h3>
+    <p>Examinar as percepções teleológicas fundamentais e expressões de propósito dentro do Antigo Testamento.</p>
+    </div>
+
+    <div class="questions-section">
+    <h3>Questões-Chave</h3>
+    <ul class="key-questions">
+    <li>Como a narrativa da criação em Gênesis implica um propósito para a humanidade?</li>
+    <li>Qual é o significado da aliança na definição do propósito de Israel?</li>
+    <li>Como a literatura sapiencial e os livros proféticos contribuem para a compreensão do propósito da vida?</li>
+    </ul>
+    </div>
+
+    <div class="materials-section">
+    <h3>Materiais de Estudo</h3>
+    
+    <div class="material-category">
+    <h4>Textos Bíblicos (Antigo Testamento)</h4>
+    <div class="material-list">
+    <div class="material-item">
+    <input type="checkbox" id="material3_1" class="material-checkbox">
+    <label for="material3_1">
+    <a href="https://www.biblegateway.com/passage/?search=Genesis%201-3&version=NIV" target="_blank">Genesis 1-3 NIV (Bible Gateway)</a>
+    </label>
+    </div>
+    <div class="material-item">
+    <input type="checkbox" id="material3_2" class="material-checkbox">
+    <label for="material3_2">
+    <a href="https://www.biblegateway.com/passage/?search=Genesis%2012&version=NIV" target="_blank">Genesis 12 NIV (Bible Gateway)</a>
+    </label>
+    </div>
+    <div class="material-item">
+    <input type="checkbox" id="material3_3" class="material-checkbox">
+    <label for="material3_3">
+    <a href="https://www.biblegateway.com/passage/?search=Exodus%2020&version=NIV" target="_blank">Exodus 20 NIV (Bible Gateway)</a>
+    </label>
+    </div>
+    <div class="material-item">
+    <input type="checkbox" id="material3_4" class="material-checkbox">
+    <label for="material3_4">
+    <a href="https://www.biblegateway.com/passage/?search=Deuteronomy%206%3A4-6&version=TLV" target="_blank">Deuteronomy 6:4-6 TLV (Bible Gateway)</a>
+    </label>
+    </div>
+    <div class="material-item">
+    <input type="checkbox" id="material3_5" class="material-checkbox">
+    <label for="material3_5">
+    <a href="https://www.biblegateway.com/passage/?search=Psalm%208&version=NIV" target="_blank">Psalm 8 NIV (Bible Gateway)</a>
+    </label>
+    </div>
+    <div class="material-item">
+    <input type="checkbox" id="material3_6" class="material-checkbox">
+    <label for="material3_6">
+    <a href="https://www.biblegateway.com/passage/?search=Psalm%2019&version=NIV" target="_blank">Psalm 19 NIV (Bible Gateway)</a>
+    </label>
+    </div>
+    <div class="material-item">
+    <input type="checkbox" id="material3_7" class="material-checkbox">
+    <label for="material3_7">
+    <a href="https://www.biblegateway.com/passage/?search=Psalm%20139&version=NIV" target="_blank">Psalm 139 NIV (Bible Gateway)</a>
+    </label>
+    </div>
+    <div class="material-item">
+    <input type="checkbox" id="material3_8" class="material-checkbox">
+    <label for="material3_8">
+    <a href="https://www.biblegateway.com/passage/?search=Proverbs&version=NIV" target="_blank">Proverbs NIV (Bible Gateway)</a>
+    </label>
+    </div>
+    <div class="material-item">
+    <input type="checkbox" id="material3_9" class="material-checkbox">
+    <label for="material3_9">
+    <a href="https://www.biblegateway.com/passage/?search=Ecclesiastes&version=NIV" target="_blank">Ecclesiastes NIV (Bible Gateway)</a>
+    </label>
+    </div>
+    <div class="material-item">
+    <input type="checkbox" id="material3_10" class="material-checkbox">
+    <label for="material3_10">
+    <a href="https://www.biblegateway.com/passage/?search=Isaiah%2043%3A7&version=NIV" target="_blank">Isaiah 43:7 NIV (Bible Gateway)</a>
+    </label>
+    </div>
+    <div class="material-item">
+    <input type="checkbox" id="material3_11" class="material-checkbox">
+    <label for="material3_11">
+    <a href="https://www.biblegateway.com/passage/?search=Jeremiah%2029%3A11&version=NIV" target="_blank">Jeremiah 29:11 NIV (Bible Gateway)</a>
+    </label>
+    </div>
+    </div>
+    </div>
+
+    <div class="material-category">
+    <h4>Livros Didáticos de Teologia (Teologia do Antigo Testamento)</h4>
+    <div class="material-list">
+    <div class="material-item">
+    <input type="checkbox" id="material3_12" class="material-checkbox">
+    <label for="material3_12">
+    <a href="https://www.religion-online.org/article/covenant-and-creation/" target="_blank">Covenant and Creation (Religion-Online.org)</a>
+    </label>
+    </div>
+    <div class="material-item">
+    <input type="checkbox" id="material3_13" class="material-checkbox">
+    <label for="material3_13">
+    <a href="https://www.biblicaltraining.org/learn/institute/ot590-old-testament-theology/ot590-01-introduction-to-old-testament-theology" target="_blank">Introduction to Old Testament Theology - Paul House (BiblicalTraining.org)</a>
+    </label>
+    </div>
+    </div>
+    </div>
+
+    <div class="material-category">
+    <h4>Comentários</h4>
+    <div class="material-list">
+    <div class="material-item">
+    <input type="checkbox" id="material3_14" class="material-checkbox">
+    <label for="material3_14">
+    <a href="https://www.biblegateway.com/resources/commentaries/" target="_blank">BibleGateway Commentaries</a>
+    </label>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <div class="activities-section">
+    <h3>Atividades</h3>
+    <div class="activity-list">
+    <div class="activity-item">
+    <input type="checkbox" id="activity3_1" class="activity-checkbox">
+    <label for="activity3_1">Identificar passagens específicas que articulam um propósito divino para a humanidade</label>
+    </div>
+    <div class="activity-item">
+    <input type="checkbox" id="activity3_2" class="activity-checkbox">
+    <label for="activity3_2">Discutir a relação entre obediência à lei de Deus e encontrar propósito no Antigo Testamento</label>
+    </div>
+    <div class="activity-item">
+    <input type="checkbox" id="activity3_3" class="activity-checkbox">
+    <label for="activity3_3">Analisar o tema da "vaidade" em Eclesiastes e como ele finalmente aponta para Deus</label>
+    </div>
+    <div class="activity-item">
+    <input type="checkbox" id="activity3_4" class="activity-checkbox">
+    <label for="activity3_4">Refletir sobre o propósito corporativo de Israel como luz para as nações</label>
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+
+    <!-- Phase 4: Teleologia Cristã - Novo Testamento -->
+    <section class="phase-section" id="phase4" data-phase="4">
+    <div class="phase-header">
+    <h2 class="phase-title">Fase 4: Teleologia Cristã e Propósito da Vida - Novo Testamento e Visão Cristocêntrica</h2>
+    <p class="phase-duration">Semanas 9-11</p>
+    <div class="phase-progress">
+    <div class="progress-bar">
+    <div class="progress-fill" data-progress="phase4"></div>
+    </div>
+    <span class="progress-text" data-progress-text="phase4">0% Concluído</span>
+    </div>
+    </div>
+
+    <div class="phase-content">
+    <div class="goal-section">
+    <h3>Objetivo</h3>
+    <p>Mergulhar na articulação do Novo Testamento sobre o propósito, enfatizando a centralidade de Jesus Cristo e do Espírito Santo.</p>
+    </div>
+
+    <div class="questions-section">
+    <h3>Questões-Chave</h3>
+    <ul class="key-questions">
+    <li>Como a vida, morte e ressurreição de Jesus redefinem o propósito humano?</li>
+    <li>Qual é o papel do Reino de Deus na compreensão do propósito cristão?</li>
+    <li>Como as Epístolas (Paulo, Pedro, João) articulam o propósito dos crentes individual e corporativamente?</li>
+    <li>Qual é o propósito escatológico final para a humanidade e a criação?</li>
+    </ul>
+    </div>
+
+    <div class="materials-section">
+    <h3>Materiais de Estudo</h3>
+    
+    <div class="material-category">
+    <h4>Textos Bíblicos (Novo Testamento)</h4>
+    <div class="material-list">
+    <div class="material-item">
+    <input type="checkbox" id="material4_1" class="material-checkbox">
+    <label for="material4_1">
+    <a href="https://www.biblegateway.com/passage/?search=Matthew%205-7&version=NIV" target="_blank">Matthew 5-7 NIV (Bible Gateway)</a>
+    </label>
+    </div>
+    <div class="material-item">
+    <input type="checkbox" id="material4_2" class="material-checkbox">
+    <label for="material4_2">
+    <a href="https://www.biblegateway.com/passage/?search=Matthew%2028%3A18-20&version=NIV" target="_blank">Matthew 28:18-20 NIV (Bible Gateway)</a>
+    </label>
+    </div>
+    <div class="material-item">
+    <input type="checkbox" id="material4_3" class="material-checkbox">
+    <label for="material4_3">
+    <a href="https://www.biblegateway.com/passage/?search=John%2015&version=NIV" target="_blank">John 15 NIV (Bible Gateway)</a>
+    </label>
+    </div>
+    <div class="material-item">
+    <input type="checkbox" id="material4_4" class="material-checkbox">
+    <label for="material4_4">
+    <a href="https://www.biblegateway.com/passage/?search=Romans%208&version=NIV" target="_blank">Romans 8 NIV (Bible Gateway)</a>
+    </label>
+    </div>
+    <div class="material-item">
+    <input type="checkbox" id="material4_5" class="material-checkbox">
+    <label for="material4_5">
+    <a href="https://www.biblegateway.com/passage/?search=Romans%2012%3A1-2&version=NIV" target="_blank">Romans 12:1-2 NIV (Bible Gateway)</a>
+    </label>
+    </div>
+    <div class="material-item">
+    <input type="checkbox" id="material4_6" class="material-checkbox">
+    <label for="material4_6">
+    <a href="https://www.biblegateway.com/passage/?search=1%20Corinthians%2010%3A31&version=NIV" target="_blank">1 Corinthians 10:31 NIV (Bible Gateway)</a>
+    </label>
+    </div>
+    <div class="material-item">
+    <input type="checkbox" id="material4_7" class="material-checkbox">
+    <label for="material4_7">
+    <a href="https://www.biblegateway.com/passage/?search=1%20Corinthians%2012&version=NIV" target="_blank">1 Corinthians 12 NIV (Bible Gateway)</a>
+    </label>
+    </div>
+    <div class="material-item">
+    <input type="checkbox" id="material4_8" class="material-checkbox">
+    <label for="material4_8">
+    <a href="https://www.biblegateway.com/passage/?search=Ephesians%201%3A3-14&version=NIV" target="_blank">Ephesians 1:3-14 NIV (Bible Gateway)</a>
+    </label>
+    </div>
+    <div class="material-item">
+    <input type="checkbox" id="material4_9" class="material-checkbox">
+    <label for="material4_9">
+    <a href="https://www.biblegateway.com/passage/?search=Ephesians%202%3A10&version=NIV" target="_blank">Ephesians 2:10 NIV (Bible Gateway)</a>
+    </label>
+    </div>
+    <div class="material-item">
+    <input type="checkbox" id="material4_10" class="material-checkbox">
+    <label for="material4_10">
+    <a href="https://www.biblegateway.com/passage/?search=Ephesians%204%3A1-16&version=NIV" target="_blank">Ephesians 4:1-16 NIV (Bible Gateway)</a>
+    </label>
+    </div>
+    <div class="material-item">
+    <input type="checkbox" id="material4_11" class="material-checkbox">
+    <label for="material4_11">
+    <a href="https://www.biblegateway.com/passage/?search=Philippians%202%3A1-11&version=NIV" target="_blank">Philippians 2:1-11 NIV (Bible Gateway)</a>
+    </label>
+    </div>
+    <div class="material-item">
+    <input type="checkbox" id="material4_12" class="material-checkbox">
+    <label for="material4_12">
+    <a href="https://www.biblegateway.com/passage/?search=Philippians%203%3A7-14&version=NIV" target="_blank">Philippians 3:7-14 NIV (Bible Gateway)</a>
+    </label>
+    </div>
+    <div class="material-item">
+    <input type="checkbox" id="material4_13" class="material-checkbox">
+    <label for="material4_13">
+    <a href="https://www.biblegateway.com/passage/?search=Colossians%201%3A15-20&version=NIV" target="_blank">Colossians 1:15-20 NIV (Bible Gateway)</a>
+    </label>
+    </div>
+    <div class="material-item">
+    <input type="checkbox" id="material4_14" class="material-checkbox">
+    <label for="material4_14">
+    <a href="https://www.biblegateway.com/passage/?search=1%20Peter%202%3A9-10&version=NIV" target="_blank">1 Peter 2:9-10 NIV (Bible Gateway)</a>
+    </label>
+    </div>
+    <div class="material-item">
+    <input type="checkbox" id="material4_15" class="material-checkbox">
+    <label for="material4_15">
+    <a href="https://www.biblegateway.com/passage/?search=Revelation%2021-22&version=NIV" target="_blank">Revelation 21-22 NIV (Bible Gateway)</a>
+    </label>
+    </div>
+    </div>
+    </div>
+
+    <div class="material-category">
+    <h4>Livros Didáticos de Teologia Sistemática</h4>
+    <div class="material-list">
+    <div class="material-item">
+    <input type="checkbox" id="material4_16" class="material-checkbox">
+    <label for="material4_16">
+    <a href="https://redeeminggod.com/divisions-of-systematic-theology/" target="_blank">Divisions of Systematic Theology (RedeemingGod.com)</a>
+    </label>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <div class="activities-section">
+    <h3>Atividades</h3>
+    <div class="activity-list">
+    <div class="activity-item">
+    <input type="checkbox" id="activity4_1" class="activity-checkbox">
+    <label for="activity4_1">Explicar o conceito de "telos" como compreendido no Novo Testamento (ex: Cristo como o telos da lei, o telos da salvação)</label>
+    </div>
+    <div class="activity-item">
+    <input type="checkbox" id="activity4_2" class="activity-checkbox">
+    <label for="activity4_2">Discutir como a vida de Jesus serve como o modelo final para o propósito humano</label>
+    </div>
+    <div class="activity-item">
+    <input type="checkbox" id="activity4_3" class="activity-checkbox">
+    <label for="activity4_3">Identificar os propósitos-chave da Igreja como o corpo de Cristo</label>
+    </div>
+    <div class="activity-item">
+    <input type="checkbox" id="activity4_4" class="activity-checkbox">
+    <label for="activity4_4">Escrever uma reflexão sobre como o Espírito Santo capacita os crentes a viver seu propósito</label>
+    </div>
+    <div class="activity-item">
+    <input type="checkbox" id="activity4_5" class="activity-checkbox">
+    <label for="activity4_5">Considerar as implicações da "nova criação" para compreender o propósito final</label>
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+
+    <!-- Phase 5: Visões Contemporâneas -->
+    <section class="phase-section" id="phase5" data-phase="5">
+    <div class="phase-header">
+    <h2 class="phase-title">Fase 5: Visões Cristãs Contemporâneas de Propósito e Aplicação Prática</h2>
+    <p class="phase-duration">Semanas 12-14</p>
+    <div class="phase-progress">
+    <div class="progress-bar">
+    <div class="progress-fill" data-progress="phase5"></div>
+    </div>
+    <span class="progress-text" data-progress-text="phase5">0% Concluído</span>
+    </div>
+    </div>
+
+    <div class="phase-content">
+    <div class="goal-section">
+    <h3>Objetivo</h3>
+    <p>Explorar diversas perspectivas cristãs contemporâneas sobre o propósito da vida e aplicar essas percepções à vida pessoal.</p>
+    </div>
+
+    <div class="questions-section">
+    <h3>Questões-Chave</h3>
+    <ul class="key-questions">
+    <li>Como diferentes denominações e tradições cristãs articulam o propósito (ex: Reformada, Católica, Ortodoxa, Pentecostal)?</li>
+    <li>Qual é a relação entre propósito, vocação/chamado e dons espirituais?</li>
+    <li>Como uma compreensão cristã do propósito informa a ética, justiça social e engajamento com o mundo?</li>
+    <li>Como um indivíduo pode discernir e viver seu propósito cristão na vida diária?</li>
+    </ul>
+    </div>
+
+    <div class="materials-section">
+    <h3>Materiais de Estudo</h3>
+    
+    <div class="material-category">
+    <h4>Autores Cristãos Contemporâneos</h4>
+    <div class="material-list">
+    <div class="material-item">
+    <input type="checkbox" id="material5_1" class="material-checkbox">
+    <label for="material5_1">
+    <a href="https://www.purposedriven.com/" target="_blank">Rick Warren: The Purpose Driven Life (Official Website)</a>
+    </label>
+    </div>
+    <div class="material-item">
+    <input type="checkbox" id="material5_2" class="material-checkbox">
+    <label for="material5_2">
+    <a href="https://archive.org/stream/RickWarrenThePurposeDrivenLifeWhatOnEarthAmIHereFor_201810/Rick-Warren-The-Purpose-Driven-Life-What-on-Earth-Am-I-Here-For_djvu.txt" target="_blank">The Purpose Driven Life (Full text on Archive.org)</a>
+    </label>
+    </div>
+    <div class="material-item">
+    <input type="checkbox" id="material5_3" class="material-checkbox">
+    <label for="material5_3">
+    <a href="https://www.ntwrightonline.org/the-gospel-and-the-kingdom-of-god/" target="_blank">N.T. Wright: The Gospel and the Kingdom of God</a>
+    </label>
+    </div>
+    <div class="material-item">
+    <input type="checkbox" id="material5_4" class="material-checkbox">
+    <label for="material5_4">
+    <a href="https://ntwrightpage.com/2016/07/12/imagining-the-kingdom/" target="_blank">N.T. Wright: Imagining the Kingdom: Mission and Theology</a>
+    </label>
+    </div>
+    <div class="material-item">
+    <input type="checkbox" id="material5_5" class="material-checkbox">
+    <label for="material5_5">
+    <a href="https://dwillard.org/resources/articles/spiritual-formation-what-it-is-and-how-it-is-done" target="_blank">Dallas Willard: Spiritual Formation: What it is, and How it is Done</a>
+    </label>
+    </div>
+    <div class="material-item">
+    <input type="checkbox" id="material5_6" class="material-checkbox">
+    <label for="material5_6">
+    <a href="https://dwillard.org/" target="_blank">Dallas Willard: Welcome to Dallas Willard (dwillard.org)</a>
+    </label>
+    </div>
+    <div class="material-item">
+    <input type="checkbox" id="material5_7" class="material-checkbox">
+    <label for="material5_7">
+    <a href="https://henrinouwen.org/meditations/our-true-vocation/" target="_blank">Henri Nouwen: Our True Vocation</a>
+    </label>
+    </div>
+    <div class="material-item">
+    <input type="checkbox" id="material5_8" class="material-checkbox">
+    <label for="material5_8">
+    <a href="https://henrinouwen.org/read/" target="_blank">Henri Nouwen: Read Henri's Books</a>
+    </label>
+    </div>
+    <div class="material-item">
+    <input type="checkbox" id="material5_9" class="material-checkbox">
+    <label for="material5_9">
+    <a href="https://reading-rooms.tyndale.ca/lesslie-newbigin/" target="_blank">Lesslie Newbigin: Reading Room (Tyndale.ca)</a>
+    </label>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <div class="activities-section">
+    <h3>Atividades</h3>
+    <div class="activity-list">
+    <div class="activity-item">
+    <input type="checkbox" id="activity5_1" class="activity-checkbox">
+    <label for="activity5_1">Comparar e contrastar várias perspectivas cristãs contemporâneas sobre o propósito da vida</label>
+    </div>
+    <div class="activity-item">
+    <input type="checkbox" id="activity5_2" class="activity-checkbox">
+    <label for="activity5_2">Refletir sobre seus próprios dons espirituais e como eles podem contribuir para seu propósito pessoal</label>
+    </div>
+    <div class="activity-item">
+    <input type="checkbox" id="activity5_3" class="activity-checkbox">
+    <label for="activity5_3">Desenvolver uma declaração de missão pessoal informada pela teleologia cristã</label>
+    </div>
+    <div class="activity-item">
+    <input type="checkbox" id="activity5_4" class="activity-checkbox">
+    <label for="activity5_4">Discutir os desafios e oportunidades de viver uma vida cristã orientada por propósito no mundo moderno</label>
+    </div>
+    <div class="activity-item">
+    <input type="checkbox" id="activity5_5" class="activity-checkbox">
+    <label for="activity5_5">Engajar-se na aplicação prática: identificar uma área de sua vida onde você pode viver intencionalmente seu propósito cristão</label>
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+    </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+    <div class="container">
+    <div class="footer-content">
+    <div class="footer-section">
+    <h3>Sobre este Roadmap</h3>
+    <p>Este roadmap fornece uma estrutura robusta para explorar a profunda interseção da teleologia e a compreensão cristã do propósito da vida. Aproveite a jornada de descoberta!</p>
+    </div>
+    
+    <div class="footer-section">
+    <h3>Orientações Gerais</h3>
+    <ul>
+    <li><strong>Reflexão:</strong> Reflita regularmente sobre suas leituras e percepções</li>
+    <li><strong>Discussão:</strong> Envolva-se em discussões com outros que também estudam estes tópicos</li>
+    <li><strong>Oração e Contemplação:</strong> Integre a reflexão espiritual ao seu processo de estudo</li>
+    <li><strong>Flexibilidade:</strong> Ajuste o ritmo e a profundidade com base em seus interesses e estilo de aprendizagem</li>
+    <li><strong>Pensamento Crítico:</strong> Sempre pergunte "por quê" e "como", avaliando argumentos e perspectivas</li>
+    </ul>
+    </div>
+    
+    <div class="footer-section">
+    <h3>Funcionalidades</h3>
+    <ul>
+    <li>✓ Progresso salvo automaticamente</li>
+    <li>✓ Funciona offline</li>
+    <li>✓ Design responsivo</li>
+    <li>✓ Exportar/Importar progresso</li>
+    </ul>
+    </div>
+    </div>
+    
+    <div class="footer-bottom">
+    <p>&copy; 2025 Roadmap de Estudos: Teleologia e Propósito Cristão da Vida. Criado para fins educacionais.</p>
+    </div>
+    </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

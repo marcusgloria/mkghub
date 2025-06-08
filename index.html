@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Roadmaps de Estudo</title>
+    <meta name="description" content="Hub central para acessar todos os meus roadmaps de estudo organizados">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#667eea">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: fadeInUp 1s ease;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .stats-section {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            color: white;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+
+        .stat-item p {
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+
+        .roadmaps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .roadmap-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 1s ease 0.6s both;
+        }
+
+        .roadmap-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+        }
+
+        .roadmap-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .roadmap-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+
+        .roadmap-description {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .roadmap-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        .roadmap-phases, .roadmap-duration {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #e9ecef;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+
+        .roadmap-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            padding: 0.8rem 2rem;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .roadmap-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .add-roadmap-card {
+            border: 2px dashed #ddd;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            min-height: 300px;
+            animation: fadeInUp 1s ease 0.8s both;
+        }
+
+        .add-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            opacity: 0.3;
+        }
+
+        .add-title {
+            color: #888;
+            margin-bottom: 1rem;
+        }
+
+        .add-description {
+            color: #aaa;
+            margin-bottom: 1.5rem;
+        }
+
+        .features-section {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            animation: fadeInUp 1s ease 1s both;
+        }
+
+        .features-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #2c3e50;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-item h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+        }
+
+        .feature-item p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 3rem;
+            color: rgba(255,255,255,0.8);
+            font-size: 0.9rem;
+            animation: fadeInUp 1s ease 1.2s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .roadmaps-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 1.5rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>📚 Meus Roadmaps de Estudo</h1>
+            <p>Uma coleção organizada de guias de aprendizado para explorar temas profundos e desenvolver conhecimento estruturado</p>
+        </header>
+
+        <section class="stats-section">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3 id="totalRoadmaps">1</h3>
+                    <p>Roadmap Ativo</p>
+                </div>
+                <div class="stat-item">
+                    <h3 id="totalPhases">5</h3>
+                    <p>Fases de Estudo</p>
+                </div>
+                <div class="stat-item">
+                    <h3 id="totalWeeks">14</h3>
+                    <p>Semanas de Conteúdo</p>
+                </div>
+                <div class="stat-item">
+                    <h3 id="overallProgress">0%</h3>
+                    <p>Progresso Geral</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="roadmaps-grid">
+            <div class="roadmap-card">
+                <h2 class="roadmap-title">🎯 Teleologia e Propósito Cristão da Vida</h2>
+                <p class="roadmap-description">
+                    Um guia abrangente e interativo para explorar o propósito da vida através da perspectiva teleológica cristã, desde fundamentos filosóficos até aplicações práticas contemporâneas.
+                </p>
+                
+                <div class="roadmap-meta">
+                    <div class="roadmap-phases">
+                        <span>📋</span>
+                        <span>5 Fases</span>
+                    </div>
+                    <div class="roadmap-duration">
+                        <span>⏱️</span>
+                        <span>14 Semanas</span>
+                    </div>
+                </div>
+
+                <div class="progress-bar">
+                    <div class="progress-fill" id="teleologiaProgress" style="width: 0%"></div>
+                </div>
+
+                <a href="teleologia.html" class="roadmap-button">
+                    Continuar Estudos →
+                </a>
+            </div>
+
+            <div class="roadmap-card add-roadmap-card">
+                <div class="add-icon">➕</div>
+                <h3 class="add-title">Adicionar Novo Roadmap</h3>
+                <p class="add-description">Crie um novo guia de estudos personalizado</p>
+                <button class="roadmap-button" style="max-width: 200px;" onclick="showComingSoon()">
+                    Criar Roadmap
+                </button>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <h2 class="features-title">✨ Funcionalidades</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">💾</div>
+                    <h4>Progresso Automático</h4>
+                    <p>Seu progresso é salvo automaticamente enquanto você estuda</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📱</div>
+                    <h4>Design Responsivo</h4>
+                    <p>Acesse seus roadmaps em qualquer dispositivo, desktop ou mobile</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🔄</div>
+                    <h4>Exportar/Importar</h4>
+                    <p>Faça backup do seu progresso e compartilhe com outros</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🌐</div>
+                    <h4>Funciona Offline</h4>
+                    <p>Continue estudando mesmo sem conexão com a internet</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>© 2025 Meus Roadmaps de Estudo. Criado para fins educacionais e desenvolvimento pessoal.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Carregar progresso do roadmap de teleologia
+        function loadTeleologiaProgress() {
+            try {
+                const progress = localStorage.getItem('roadmapProgress');
+                if (progress) {
+                    const data = JSON.parse(progress);
+                    const overallProgress = data.overallProgress || 0;
+                    
+                    // Atualizar barra de progresso
+                    document.getElementById('teleologiaProgress').style.width = overallProgress + '%';
+                    document.getElementById('overallProgress').textContent = overallProgress + '%';
+                }
+            } catch (error) {
+                console.error('Erro ao carregar progresso:', error);
+            }
+        }
+
+        function showComingSoon() {
+            alert('🚧 Funcionalidade em desenvolvimento!\\n\\nEm breve você poderá criar seus próprios roadmaps personalizados.');
+        }
+
+        // Registrar Service Worker
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js')
+                .then(registration => console.log('SW registrado'))
+                .catch(error => console.log('Erro no SW:', error));
+        }
+
+        // Carregar dados quando a página carregar
+        document.addEventListener('DOMContentLoaded', loadTeleologiaProgress);
+    </script>
+</body>
+</html>
