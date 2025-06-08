@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roadmap de Estudos: IA Generativa com Foco Comercial</title>
+    <meta name="description" content="Um guia abrangente para dominar IA Generativa com aplicações comerciais práticas">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2E4057">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="back-to-hub">
+                <a href="index.html" class="back-btn">← Voltar ao Hub</a>
+            </div>
+            <h1 class="main-title">Roadmap de Estudos</h1>
+            <h2 class="subtitle">IA Generativa com Foco Comercial</h2>
+            <p class="description">Um plano didático para aplicações reais e integrações comerciais</p>
+
+            <!-- Progress Indicator -->
+            <div class="overall-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="overallProgress"></div>
+                </div>
+                <span class="progress-text" id="progressText">0% Concluído</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navigation" id="navigation">
+        <div class="container">
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-list" id="navList">
+                <li class="nav-item">
+                    <a href="#phase1" class="nav-link active" data-phase="1">
+                        <span class="phase-number">1</span>
+                        <span class="phase-title">Fundamentos da IA Generativa</span>
+                        <span class="phase-weeks">Semanas 1-2</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#phase2" class="nav-link" data-phase="2">
+                        <span class="phase-number">2</span>
+                        <span class="phase-title">Engenharia de Prompt</span>
+                        <span class="phase-weeks">Semana 3</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#phase3" class="nav-link" data-phase="3">
+                        <span class="phase-number">3</span>
+                        <span class="phase-title">Python para IA Generativa</span>
+                        <span class="phase-weeks">Semana 4</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#phase4" class="nav-link" data-phase="4">
+                        <span class="phase-number">4</span>
+                        <span class="phase-title">LangChain</span>
+                        <span class="phase-weeks">Semanas 5-6</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#phase5" class="nav-link" data-phase="5">
+                        <span class="phase-number">5</span>
+                        <span class="phase-title">Sistemas Multi-Agentes</span>
+                        <span class="phase-weeks">Semana 7</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#phase6" class="nav-link" data-phase="6">
+                        <span class="phase-number">6</span>
+                        <span class="phase-title">n8n - Integrações</span>
+                        <span class="phase-weeks">Semana 8</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#phase7" class="nav-link" data-phase="7">
+                        <span class="phase-number">7</span>
+                        <span class="phase-title">n8n + LLMs</span>
+                        <span class="phase-weeks">Semanas 9-10</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="btn btn-secondary" id="resetProgress">Limpar Progresso</button>
+                <button class="btn btn-secondary" id="exportProgress">Exportar</button>
+                <input type="file" id="importProgress" accept=".json" style="display: none;">
+                <button class="btn btn-secondary" id="importBtn">Importar</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Phase 1: Fundamentos da IA Generativa -->
+            <section class="phase-section active" id="phase1" data-phase="1">
+                <div class="phase-header">
+                    <h2 class="phase-title">Etapa 1: Fundamentos da IA Generativa</h2>
+                    <p class="phase-duration">Semanas 1-2 (20h)</p>
+                    <div class="phase-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-progress="phase1"></div>
+                        </div>
+                        <span class="progress-text" data-progress-text="phase1">0% Concluído</span>
+                    </div>
+                </div>
+
+                <div class="phase-content">
+                    <div class="goal-section">
+                        <h3>Objetivo</h3>
+                        <p>Entender como modelos generativos funcionam (texto e imagem), arquiteturas principais e ecossistema de provedores. Ao final, você saberá diferenciar LLMs, Stable Diffusion, RAG e agentes.</p>
+                    </div>
+
+                    <div class="questions-section">
+                        <h3>Questões-Chave</h3>
+                        <ul class="key-questions">
+                            <li>Como uma rede Transformer gera texto e imagens?</li>
+                            <li>Quais são as diferenças entre GPT, BERT, Stable Diffusion e Diffusion Models?</li>
+                            <li>O que é RAG (Retrieval-Augmented Generation) e por que é tão valioso em contextos comerciais?</li>
+                            <li>Como funcionam agentes multi-modais e quais provedores utilizar (OpenAI, Anthropic, HF)?</li>
+                        </ul>
+                    </div>
+
+                    <div class="materials-section">
+                        <h3>Materiais de Estudo</h3>
+
+                        <div class="material-category">
+                            <h4>Gratuito</h4>
+                            <div class="material-list">
+                                <div class="material-item">
+                                    <input type="checkbox" id="material1_1" class="material-checkbox">
+                                    <label for="material1_1">
+                                        <a href="https://www.youtube.com/playlist?list=PLoROMvodv4rOSH4v6133s9LFPRHjEmbmJ" target="_blank">CS224n: NLP with Deep Learning (Stanford YouTube)</a>
+                                    </label>
+                                </div>
+                                <div class="material-item">
+                                    <input type="checkbox" id="material1_2" class="material-checkbox">
+                                    <label for="material1_2">
+                                        <a href="https://huggingface.co/course" target="_blank">Hugging Face 🤗 Course</a>
+                                    </label>
+                                </div>
+                                <div class="material-item">
+                                    <input type="checkbox" id="material1_3" class="material-checkbox">
+                                    <label for="material1_3">
+                                        <a href="https://arxiv.org/abs/1706.03762" target="_blank">Artigo "Attention Is All You Need"</a>
+                                    </label>
+                                </div>
+                                <div class="material-item">
+                                    <input type="checkbox" id="material1_4" class="material-checkbox">
+                                    <label for="material1_4">
+                                        <a href="https://huggingface.co/blog/stable_diffusion" target="_blank">Blog "Stable Diffusion Explained"</a>
+                                    </label>
+                                </div>
+                                <div class="material-item">
+                                    <input type="checkbox" id="material1_5" class="material-checkbox">
+                                    <label for="material1_5">
+                                        <a href="https://platform.openai.com/docs/models" target="_blank">Documentação OpenAI Models</a>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="material-category">
+                            <h4>Pago / Premium</h4>
+                            <div class="material-list">
+                                <div class="material-item">
+                                    <input type="checkbox" id="material1_6" class="material-checkbox">
+                                    <label for="material1_6">Deep Learning Specialization (Coursera, Andrew Ng)</label>
+                                </div>
+                                <div class="material-item">
+                                    <input type="checkbox" id="material1_7" class="material-checkbox">
+                                    <label for="material1_7">Livro "Hands-On Machine Learning with Scikit-Learn, Keras & TensorFlow" (O'Reilly)</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="material-category">
+                            <h4>Repositórios</h4>
+                            <div class="material-list">
+                                <div class="material-item">
+                                    <input type="checkbox" id="material1_8" class="material-checkbox">
+                                    <label for="material1_8">
+                                        <a href="https://github.com/huggingface/transformers" target="_blank">huggingface/transformers</a>
+                                    </label>
+                                </div>
+                                <div class="material-item">
+                                    <input type="checkbox" id="material1_9" class="material-checkbox">
+                                    <label for="material1_9">
+                                        <a href="https://github.com/openai/openai-quickstart-python" target="_blank">openai/openai-quickstart-python</a>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activities-section">
+                        <h3>Atividades</h3>
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <input type="checkbox" id="activity1_1" class="activity-checkbox">
+                                <label for="activity1_1"><strong>Experimento:</strong> Fine-tune GPT-2 em dados de FAQs de um produto real (treinar, avaliar perplexidade)</label>
+                            </div>
+                            <div class="activity-item">
+                                <input type="checkbox" id="activity1_2" class="activity-checkbox">
+                                <label for="activity1_2"><strong>Experimento:</strong> Gerar prompts para criação de artes promocionais com Stable Diffusion</label>
+                            </div>
+                            <div class="activity-item">
+                                <input type="checkbox" id="activity1_3" class="activity-checkbox">
+                                <label for="activity1_3"><strong>Integração Comercial:</strong> Simular um mini-pipeline RAG: indexar manuais em um vectorDB (FAISS) e responder perguntas via API</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Phase 2: Engenharia de Prompt -->
+            <section class="phase-section" id="phase2" data-phase="2">
+                <div class="phase-header">
+                    <h2 class="phase-title">Etapa 2: Engenharia de Prompt</h2>
+                    <p class="phase-duration">Semana 3 (8h)</p>
+                    <div class="phase-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-progress="phase2"></div>
+                        </div>
+                        <span class="progress-text" data-progress-text="phase2">0% Concluído</span>
+                    </div>
+                </div>
+
+                <div class="phase-content">
+                    <div class="goal-section">
+                        <h3>Objetivo</h3>
+                        <p>Aprender a formular prompts robustos, controlar saídas e criar fluxos encadeados (prompt chaining) para maximizar a qualidade e confiabilidade das respostas em casos de uso corporativos.</p>
+                    </div>
+
+                    <div class="questions-section">
+                        <h3>Questões-Chave</h3>
+                        <ul class="key-questions">
+                            <li>Como estruturar "system", "user" e "assistant messages" de forma eficaz?</li>
+                            <li>Quando usar Chain-of-Thought (CoT), ReAct ou function calling?</li>
+                            <li>Como ajustar parâmetros (temperature, top_p, max_tokens) para cada contexto?</li>
+                            <li>Quais padrões de prompt dinâmico favorecem integração com APIs externas?</li>
+                        </ul>
+                    </div>
+
+                    <div class="materials-section">
+                        <h3>Materiais de Estudo</h3>
+
+                        <div class="material-category">
+                            <h4>Gratuito</h4>
+                            <div class="material-list">
+                                <div class="material-item">
+                                    <input type="checkbox" id="material2_1" class="material-checkbox">
+                                    <label for="material2_1">
+                                        <a href="https://github.com/dair-ai/Prompt-Engineering-Guide" target="_blank">Prompt Engineering Guide</a>
+                                    </label>
+                                </div>
+                                <div class="material-item">
+                                    <input type="checkbox" id="material2_2" class="material-checkbox">
+                                    <label for="material2_2">Vídeo "Prompt Chaining with LangChain" (YouTube oficial LangChain)</label>
+                                </div>
+                                <div class="material-item">
+                                    <input type="checkbox" id="material2_3" class="material-checkbox">
+                                    <label for="material2_3">
+                                        <a href="https://arxiv.org/abs/2210.03629" target="_blank">Artigo "ReAct: Synergizing Reasoning and Acting"</a>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="material-category">
+                            <h4>Pago / Premium</h4>
+                            <div class="material-list">
+                                <div class="material-item">
+                                    <input type="checkbox" id="material2_4" class="material-checkbox">
+                                    <label for="material2_4">Curso "Prompting for Language Models" (Udemy)</label>
+                                </div>
+                                <div class="material-item">
+                                    <input type="checkbox" id="material2_5" class="material-checkbox">
+                                    <label for="material2_5">Livro "Prompt Engineering for Everyone" (O'Reilly)</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activities-section">
+                        <h3>Atividades</h3>
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <input type="checkbox" id="activity2_1" class="activity-checkbox">
+                                <label for="activity2_1">Construir um fluxo de prompts para geração de e-mails comerciais com follow-up e variáveis de cliente (nome, produto)</label>
+                            </div>
+                            <div class="activity-item">
+                                <input type="checkbox" id="activity2_2" class="activity-checkbox">
+                                <label for="activity2_2">Testar CoT para diagnósticos de tickets de suporte e comparar respostas sem CoT</label>
+                            </div>
+                            <div class="activity-item">
+                                <input type="checkbox" id="activity2_3" class="activity-checkbox">
+                                <label for="activity2_3">Implementar function calling: gerar ordens de compra em JSON via API e validar com Pydantic</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Phase 3: Python para IA Generativa -->
+            <section class="phase-section" id="phase3" data-phase="3">
+                <div class="phase-header">
+                    <h2 class="phase-title">Etapa 3: Python para IA Generativa</h2>
+                    <p class="phase-duration">Semana 4 (8h)</p>
+                    <div class="phase-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-progress="phase3"></div>
+                        </div>
+                        <span class="progress-text" data-progress-text="phase3">0% Concluído</span>
+                    </div>
+                </div>
+
+                <div class="phase-content">
+                    <div class="goal-section">
+                        <h3>Objetivo</h3>
+                        <p>Desenvolver habilidades práticas em Python para consumo de APIs de IA, tratamento de dados e criação de serviços leves.</p>
+                    </div>
+
+                    <div class="questions-section">
+                        <h3>Questões-Chave</h3>
+                        <ul class="key-questions">
+                            <li>Como consumir a API OpenAI (ou HF) via requests/SDK oficial?</li>
+                            <li>Como modelar entradas/saídas com Pydantic para garantir qualidade de dados?</li>
+                            <li>Como lidar com autenticação, retries e rate limits em produção?</li>
+                        </ul>
+                    </div>
+
+                    <div class="materials-section">
+                        <h3>Materiais de Estudo</h3>
+
+                        <div class="material-category">
+                            <h4>Gratuito</h4>
+                            <div class="material-list">
+                                <div class="material-item">
+                                    <input type="checkbox" id="material3_1" class="material-checkbox">
+                                    <label for="material3_1">
+                                        <a href="https://github.com/openai/openai-python" target="_blank">Documentação OpenAI Python SDK</a>
+                                    </label>
+                                </div>
+                                <div class="material-item">
+                                    <input type="checkbox" id="material3_2" class="material-checkbox">
+                                    <label for="material3_2">
+                                        <a href="https://docs.pydantic.dev/" target="_blank">Tutorial Pydantic</a>
+                                    </label>
+                                </div>
+                                <div class="material-item">
+                                    <input type="checkbox" id="material3_3" class="material-checkbox">
+                                    <label for="material3_3">Vídeo "FastAPI + OpenAI" (YouTube: Sebastián Ramírez)</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="material-category">
+                            <h4>Pago / Premium</h4>
+                            <div class="material-list">
+                                <div class="material-item">
+                                    <input type="checkbox" id="material3_4" class="material-checkbox">
+                                    <label for="material3_4">Curso "API Development with FastAPI" (Udemy)</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activities-section">
+                        <h3>Atividades</h3>
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <input type="checkbox" id="activity3_1" class="activity-checkbox">
+                                <label for="activity3_1">Escrever um módulo Python que receba texto em CSV, envie à API GPT, valide resposta com Pydantic e salve em JSON</label>
+                            </div>
+                            <div class="activity-item">
+                                <input type="checkbox" id="activity3_2" class="activity-checkbox">
+                                <label for="activity3_2">Criar um micro-serviço FastAPI para receber perguntas via POST e responder com modelo generativo</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Phase 4: LangChain -->
+            <section class="phase-section" id="phase4" data-phase="4">
+                <div class="phase-header">
+                    <h2 class="phase-title">Etapa 4: LangChain</h2>
+                    <p class="phase-duration">Semanas 5-6 (20h)</p>
+                    <div class="phase-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-progress="phase4"></div>
+                        </div>
+                        <span class="progress-text" data-progress-text="phase4">0% Concluído</span>
+                    </div>
+                </div>
+
+                <div class="phase-content">
+                    <div class="goal-section">
+                        <h3>Objetivo</h3>
+                        <p>Usar LangChain para orquestrar LLMs, criar Chains, gerenciar memória de conversação e montar pipelines RAG com vector DBs.</p>
+                    </div>
+
+                    <div class="questions-section">
+                        <h3>Questões-Chave</h3>
+                        <ul class="key-questions">
+                            <li>Como instanciar e configurar um LLMChain e um QA Chain?</li>
+                            <li>Quando usar memória de curto vs. longo prazo?</li>
+                            <li>Como criar ferramentas/prompt templates customizados?</li>
+                            <li>Como integrar vectorstores (FAISS, Pinecone) para RAG?</li>
+                        </ul>
+                    </div>
+
+                    <div class="materials-section">
+                        <h3>Materiais de Estudo</h3>
+
+                        <div class="material-category">
+                            <h4>Gratuito</h4>
+                            <div class="material-list">
+                                <div class="material-item">
+                                    <input type="checkbox" id="material4_1" class="material-checkbox">
+                                    <label for="material4_1">
+                                        <a href="https://docs.langchain.com" target="_blank">Docs LangChain</a>
+                                    </label>
+                                </div>
+                                <div class="material-item">
+                                    <input type="checkbox" id="material4_2" class="material-checkbox">
+                                    <label for="material4_2">Vídeo "LangChain Basics" (YouTube)</label>
+                                </div>
+                                <div class="material-item">
+                                    <input type="checkbox" id="material4_3" class="material-checkbox">
+                                    <label for="material4_3">Tutorial "Building a RAG Chatbot" (blog.langchain.dev)</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="material-category">
+                            <h4>Pago / Premium</h4>
+                            <div class="material-list">
+                                <div class="material-item">
+                                    <input type="checkbox" id="material4_4" class="material-checkbox">
+                                    <label for="material4_4">LangChain Masterclass (Udemy)</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activities-section">
+                        <h3>Atividades</h3>
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <input type="checkbox" id="activity4_1" class="activity-checkbox">
+                                <label for="activity4_1">Projeto RAG: indexar FAQs de um setor (ex: financeiro), montar chatbot que responde dúvidas em tempo real</label>
+                            </div>
+                            <div class="activity-item">
+                                <input type="checkbox" id="activity4_2" class="activity-checkbox">
+                                <label for="activity4_2">Criar um agente com múltiplas ferramentas (calendar API, CRM API) e memória contextual para follow-up</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Phase 5: Sistemas Multi-Agentes -->
+            <section class="phase-section" id="phase5" data-phase="5">
+                <div class="phase-header">
+                    <h2 class="phase-title">Etapa 5: Sistemas Multi-Agentes</h2>
+                    <p class="phase-duration">Semana 7 (8h)</p>
+                    <div class="phase-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-progress="phase5"></div>
+                        </div>
+                        <span class="progress-text" data-progress-text="phase5">0% Concluído</span>
+                    </div>
+                </div>
+
+                <div class="phase-content">
+                    <div class="goal-section">
+                        <h3>Objetivo</h3>
+                        <p>Arquitetar e orquestrar múltiplos agentes que colaboram para tarefas complexas, usando frameworks como LangGraph e CrewAI.</p>
+                    </div>
+
+                    <div class="questions-section">
+                        <h3>Questões-Chave</h3>
+                        <ul class="key-questions">
+                            <li>Como definir "prompts de system" e "tool specs" para cada agente?</li>
+                            <li>Quando vale a pena orquestrar agentes versus um agente monolítico?</li>
+                            <li>Como monitorar, escalar e recuperar falhas em um sistema multi-agente?</li>
+                        </ul>
+                    </div>
+
+                    <div class="materials-section">
+                        <h3>Materiais de Estudo</h3>
+
+                        <div class="material-category">
+                            <h4>Gratuito</h4>
+                            <div class="material-list">
+                                <div class="material-item">
+                                    <input type="checkbox" id="material5_1" class="material-checkbox">
+                                    <label for="material5_1">
+                                        <a href="https://github.com/langchain-ai/langgraph" target="_blank">LangGraph</a>
+                                    </label>
+                                </div>
+                                <div class="material-item">
+                                    <input type="checkbox" id="material5_2" class="material-checkbox">
+                                    <label for="material5_2">Artigo "CrewAI: Multi-Agent Framework" (Medium)</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="material-category">
+                            <h4>Pago / Premium</h4>
+                            <div class="material-list">
+                                <div class="material-item">
+                                    <input type="checkbox" id="material5_3" class="material-checkbox">
+                                    <label for="material5_3">Workshops corporativos (ex: Abacus.AI enterprise training)</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activities-section">
+                        <h3>Atividades</h3>
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <input type="checkbox" id="activity5_1" class="activity-checkbox">
+                                <label for="activity5_1">Definir 2 agentes: "DataFetcher" (busca dados CRM) e "ReportGenerator" (gera relatório e envia por e-mail)</label>
+                            </div>
+                            <div class="activity-item">
+                                <input type="checkbox" id="activity5_2" class="activity-checkbox">
+                                <label for="activity5_2">Deploy em FastAPI, expor endpoint que inicia um fluxo multi-agente</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Phase 6: n8n - Integrações e Fluxos -->
+            <section class="phase-section" id="phase6" data-phase="6">
+                <div class="phase-header">
+                    <h2 class="phase-title">Etapa 6: n8n – Integrações e Fluxos</h2>
+                    <p class="phase-duration">Semana 8 (8h)</p>
+                    <div class="phase-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-progress="phase6"></div>
+                        </div>
+                        <span class="progress-text" data-progress-text="phase6">0% Concluído</span>
+                    </div>
+                </div>
+
+                <div class="phase-content">
+                    <div class="goal-section">
+                        <h3>Objetivo</h3>
+                        <p>Dominar a plataforma n8n para construir workflows automatizados sem código, integrando sistemas (Gmail, Notion, Sheets, Webhooks).</p>
+                    </div>
+
+                    <div class="questions-section">
+                        <h3>Questões-Chave</h3>
+                        <ul class="key-questions">
+                            <li>Como criar e depurar nós (nodes) em n8n?</li>
+                            <li>Quais padrões de automação são mais comuns (event-based, scheduled)?</li>
+                            <li>Como integrar APIs externas via HTTP Request node e Webhooks?</li>
+                        </ul>
+                    </div>
+
+                    <div class="materials-section">
+                        <h3>Materiais de Estudo</h3>
+
+                        <div class="material-category">
+                            <h4>Gratuito</h4>
+                            <div class="material-list">
+                                <div class="material-item">
+                                    <input type="checkbox" id="material6_1" class="material-checkbox">
+                                    <label for="material6_1">
+                                        <a href="https://docs.n8n.io" target="_blank">Documentação n8n</a>
+                                    </label>
+                                </div>
+                                <div class="material-item">
+                                    <input type="checkbox" id="material6_2" class="material-checkbox">
+                                    <label for="material6_2">Curso "n8n Basics" (YouTube oficial n8n)</label>
+                                </div>
+                                <div class="material-item">
+                                    <input type="checkbox" id="material6_3" class="material-checkbox">
+                                    <label for="material6_3">
+                                        <a href="https://community.n8n.io" target="_blank">Comunidade e fóruns</a>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activities-section">
+                        <h3>Atividades</h3>
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <input type="checkbox" id="activity6_1" class="activity-checkbox">
+                                <label for="activity6_1">Workflow: Ao receber novo lead no Google Sheets → enviar e-mail de boas-vindas via Gmail → criar cartão no Notion</label>
+                            </div>
+                            <div class="activity-item">
+                                <input type="checkbox" id="activity6_2" class="activity-checkbox">
+                                <label for="activity6_2">Agendar rotina diária de backup de dados em S3 via HTTP Request node</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Phase 7: n8n + LLMs -->
+            <section class="phase-section" id="phase7" data-phase="7">
+                <div class="phase-header">
+                    <h2 class="phase-title">Etapa 7: n8n + LLMs (Casos Reais)</h2>
+                    <p class="phase-duration">Semanas 9-10 (20h)</p>
+                    <div class="phase-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-progress="phase7"></div>
+                        </div>
+                        <span class="progress-text" data-progress-text="phase7">0% Concluído</span>
+                    </div>
+                </div>
+
+                <div class="phase-content">
+                    <div class="goal-section">
+                        <h3>Objetivo</h3>
+                        <p>Unir o poder de LLMs a workflows n8n para criar agentes inteligentes, sumarizadores, bots de atendimento e agendas automatizadas.</p>
+                    </div>
+
+                    <div class="questions-section">
+                        <h3>Questões-Chave</h3>
+                        <ul class="key-questions">
+                            <li>Como passar variáveis dinâmicas (ex: {{ $json["customer_message"] }}) a prompts?</li>
+                            <li>Quando usar n8n Credentials vs. environment variables para chaves de API?</li>
+                            <li>Como manter contexto/memória em workflows?</li>
+                        </ul>
+                    </div>
+
+                    <div class="materials-section">
+                        <h3>Materiais de Estudo</h3>
+
+                        <div class="material-category">
+                            <h4>Gratuito</h4>
+                            <div class="material-list">
+                                <div class="material-item">
+                                    <input type="checkbox" id="material7_1" class="material-checkbox">
+                                    <label for="material7_1">
+                                        <a href="https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.openai/" target="_blank">Blog "Automations with n8n & OpenAI"</a>
+                                    </label>
+                                </div>
+                                <div class="material-item">
+                                    <input type="checkbox" id="material7_2" class="material-checkbox">
+                                    <label for="material7_2">Tutorial "PDF Summarizer in n8n" (YouTube)</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="material-category">
+                            <h4>Exemplos de Código</h4>
+                            <div class="material-list">
+                                <div class="material-item">
+                                    <input type="checkbox" id="material7_3" class="material-checkbox">
+                                    <label for="material7_3">
+                                        <a href="https://github.com/n8n-community/n8n-nodes-openai" target="_blank">n8n-community n8n-nodes-openai</a>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activities-section">
+                        <h3>Atividades</h3>
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <input type="checkbox" id="activity7_1" class="activity-checkbox">
+                                <label for="activity7_1">Atendimento automatizado via WhatsApp (Twilio + OpenAI node)</label>
+                            </div>
+                            <div class="activity-item">
+                                <input type="checkbox" id="activity7_2" class="activity-checkbox">
+                                <label for="activity7_2">Análise de PDFs (PDF node → OpenAI → Slack/Webhook)</label>
+                            </div>
+                            <div class="activity-item">
+                                <input type="checkbox" id="activity7_3" class="activity-checkbox">
+                                <label for="activity7_3">Agendamento inteligente: extrair horários de e-mails e criar eventos no Google Calendar</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Study Plan Table -->
+            <section class="study-plan-section">
+                <h2>Plano de Estudos (12 Semanas)</h2>
+                <div class="table-container">
+                    <table class="study-plan-table">
+                        <thead>
+                            <tr>
+                                <th>Semana</th>
+                                <th>Etapa</th>
+                                <th>Duração Estimada</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1–2</td>
+                                <td>Fundamentos da IA Generativa</td>
+                                <td>2 × 10 h</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Engenharia de Prompt</td>
+                                <td>8 h</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Python para IA Generativa</td>
+                                <td>8 h</td>
+                            </tr>
+                            <tr>
+                                <td>5–6</td>
+                                <td>LangChain</td>
+                                <td>2 × 10 h</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Sistemas Multi-Agentes</td>
+                                <td>8 h</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>n8n – Integrações e Fluxos</td>
+                                <td>8 h</td>
+                            </tr>
+                            <tr>
+                                <td>9–10</td>
+                                <td>n8n + LLMs (Casos Reais)</td>
+                                <td>2 × 10 h</td>
+                            </tr>
+                            <tr>
+                                <td>11–12</td>
+                                <td>Projeto Integrado (todos os módulos)</td>
+                                <td>2 × 12 h</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="study-plan-note">
+                    <strong>Ordem ideal:</strong> comece pelos fundamentos, avance para prompt e Python, depois LangChain e multi-agentes, finalize com n8n e aplicações práticas.
+                </p>
+                <p class="study-plan-conclusion">
+                    Com esse plano, em cerca de 3 meses e ~100 h de estudo e prática, você terá domínio para entregar soluções comerciais completas de IA Generativa. Bons estudos e mãos à obra! 🚀
+                </p>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sobre este Roadmap</h3>
+                    <p>Este roadmap fornece um caminho estruturado para dominar IA Generativa com foco em aplicações comerciais práticas e integrações reais.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Orientações Gerais</h3>
+                    <ul>
+                        <li><strong>Prática:</strong> Implemente todos os projetos práticos sugeridos</li>
+                        <li><strong>Experimentação:</strong> Teste diferentes modelos e parâmetros</li>
+                        <li><strong>Documentação:</strong> Mantenha um registro de suas descobertas</li>
+                        <li><strong>Comunidade:</strong> Participe de fóruns e grupos de discussão</li>
+                        <li><strong>Atualização:</strong> Acompanhe as novidades do setor</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Funcionalidades</h3>
+                    <ul>
+                        <li>✓ Progresso salvo automaticamente</li>
+                        <li>✓ Funciona offline</li>
+                        <li>✓ Design responsivo</li>
+                        <li>✓ Exportar/Importar progresso</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Roadmap de Estudos: IA Generativa com Foco Comercial. Criado para fins educacionais.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
